@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
-import {   Input, InputGroup } from "@chakra-ui/react";
+import {   Box, Input, InputGroup } from "@chakra-ui/react";
 import { AddIcon, CheckIcon } from '@chakra-ui/icons'
 interface ToggleableInputProps {
     inputValue: string;
@@ -22,32 +22,39 @@ const ToggleableInput = ({inputValue, setInputValue}: ToggleableInputProps) => {
   };
 
   const handleCloseButtonClick = () => {
-    setIsEditing(false); // Fecha o campo de entrada
+    setIsEditing(false); 
   };
 
   return (
-    <div style={{ display: "flex", alignItems: "center" }}>
+    <Box style={{display: "flex", alignItems: "center" }}>
       <AddIcon
+      ml={2}
+      display={'flex'}
+      fontSize={'18px'}
+    cursor={'pointer'}
         onClick={handleButtonClick}
         style={{
           opacity: isEditing ? 0 : 1,
           pointerEvents: isEditing ? "none" : "auto",
           transition: "opacity 0.5s ease",
-          cursor: "pointer",
-          fontSize: '16px',
-          marginLeft: '10px'
+         // cursor: "pointer",
+        //  fontSize: '16px',
+        //  marginLeft: '10px'
         }}
       />
       <InputGroup
+      mt={2}
         style={{
           flex: 1,
           opacity: isEditing ? 1 : 0,
           pointerEvents: isEditing ? "auto" : "none",
           transition: "opacity 0.5s ease",
-          marginTop: "10px",
+          //marginTop: "10px",
+          // width: '100vw'
         }}
       >
         <Input
+        ml={0}
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
           onBlur={handleInputBlur}
@@ -55,22 +62,26 @@ const ToggleableInput = ({inputValue, setInputValue}: ToggleableInputProps) => {
           pr="4.5rem"
           backgroundColor={"#232425"}
           borderRadius={6}
-          h={25}
-          mb={10}
-          p={10}
+          h={10}
+          w={135}
+          //mb={10}
+          p={2}
         />
         {isEditing && (
           <CheckIcon
             onClick={handleCloseButtonClick}
             style={{
-                marginLeft: '10px',
+              alignContent: 'center',
+              alignItems: 'center',
+              margin: 'auto',
+                marginLeft: '6px',
             fontSize: '22px',
               cursor: "pointer",
             }}
           />
         )}
       </InputGroup>
-    </div>
+    </Box>
   );
 };
 
