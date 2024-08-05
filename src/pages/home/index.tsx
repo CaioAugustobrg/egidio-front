@@ -1,4 +1,4 @@
-import { SearchIcon } from "@chakra-ui/icons";
+// import { SearchIcon } from "@chakra-ui/icons";
 
 import {
   AbsoluteCenter,
@@ -18,9 +18,9 @@ const Home = () => {
   const handlePageManagementClick = () => {
     navigate('/management');
   };
-  const handlePageSearchClick = () => {
-    navigate('/search');
-  };
+  // const handlePageSearchClick = () => {
+  //   navigate('/search');
+  // };
   const handlePageCreateTruckClick = () => {
     navigate('/create-truck');
   };

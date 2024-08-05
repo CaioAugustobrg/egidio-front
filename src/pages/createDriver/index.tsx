@@ -36,7 +36,8 @@ import apiService from "../../services/api";
       resolver: yupResolver(schema),
     });
   
-    const createUserDriver = async (data) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const createUserDriver = async (data: any) => {
       
         const loginPromise = new Promise((resolve, reject) => {
           apiService.post('/create-user-driver', data)

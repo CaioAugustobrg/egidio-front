@@ -36,7 +36,8 @@ const CreateTruck = () => {
   });
 
 
-  const createTruck = async (data) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const createTruck = async (data: any) => {
       
     const loginPromise = new Promise((resolve, reject) => {
       apiService.post('/create/truck', data)
