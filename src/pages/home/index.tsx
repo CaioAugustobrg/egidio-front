@@ -60,7 +60,7 @@ const Home = () => {
             onClick={handlePageManagementClick}
             />
         </Box>
-        <Box
+        {/* <Box
         m={1}
           w={"200px"}
           h={"200px"}
@@ -80,7 +80,7 @@ const Home = () => {
             onClick={handlePageSearchClick}
             
             />
-        </Box>
+        </Box> */}
         </Box>
         <Box display={displayMode}>
 
