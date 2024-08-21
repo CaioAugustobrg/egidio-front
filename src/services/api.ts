@@ -45,7 +45,7 @@ export class ApiService {
 }
 
 //const API_ENDPOINT = 'http://127.0.0.1:3000'
-const API_ENDPOINT = 'https://15.228.255.140:447';
+const API_ENDPOINT = 'https://ec2-15-228-255-140.sa-east-1.compute.amazonaws.com:447';
 const apiService = new ApiService(API_ENDPOINT);
 
 export default apiService;
