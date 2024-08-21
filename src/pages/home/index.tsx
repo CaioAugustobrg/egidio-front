@@ -1,4 +1,4 @@
-// import { SearchIcon } from "@chakra-ui/icons";
+ import { SearchIcon } from "@chakra-ui/icons";
 
 import {
   AbsoluteCenter,
@@ -18,9 +18,9 @@ const Home = () => {
   const handlePageManagementClick = () => {
     navigate('/management');
   };
-  // const handlePageSearchClick = () => {
-  //   navigate('/search');
-  // };
+   const handlePageSearchClick = () => {
+     navigate('/search');
+   };
   const handlePageCreateTruckClick = () => {
     navigate('/create-truck');
   };
@@ -60,7 +60,7 @@ const Home = () => {
             onClick={handlePageManagementClick}
             />
         </Box>
-        {/* <Box
+        <Box
         m={1}
           w={"200px"}
           h={"200px"}
@@ -80,7 +80,7 @@ const Home = () => {
             onClick={handlePageSearchClick}
             
             />
-        </Box> */}
+        </Box>
         </Box>
         <Box display={displayMode}>
 

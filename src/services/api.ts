@@ -44,8 +44,8 @@ export class ApiService {
   }
 }
 
-const API_ENDPOINT = 'http://15.228.14.29:447'
-//const API_ENDPOINT = 'https://oxossi-back-36b128c9078e.herokuapp.com/';
+//const API_ENDPOINT = 'http://127.0.0.1:3000'
+const API_ENDPOINT = 'https://15.228.255.140:447';
 const apiService = new ApiService(API_ENDPOINT);
 
 export default apiService;
